@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <style>
+        .Search_box h1 {
+            text-transform: uppercase;
+            margin: 0px 0px 65px 94px;
+            text-align: left;
+            color: black;
+            position: relative;
+            top: -10px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        /* .services-btn {
+            position: relative;
+            top: 170px;
+        }
+
+        #services-content .services-box p {
+            position: relative;
+            top: 45px;
+        } */
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="header-area">
+        <div class="image-edit"></div>
+        <!-- site-navbar start -->
+        <div class="navbar-area">
+            <div class="container">
+                <nav class="site-navbar">
+                    <!-- site logo -->
+                    <a href="#home" class="site-logo">logo</a>
+
+                    <!-- site menu/nav -->
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <!-- <li><a href="#">My Bookings</a></li> -->
+                        <div class="dropdown">
+                            <button class="dropbtn">My Bookings
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="#">Print Ticket</a>
+                                <a href="#">Cancel Ticket</a>
+                            </div>
+                        </div>
+                        <li><a href="#">Offers</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <!-- <li><a href="#">Sign in</a></li> -->
+                        <div class="dropdown">
+                            <button class="dropbtn">Sign in
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="#">Login</a>
+                                <a href="#">Sign Up</a>
+                            </div>
+                        </div>
+                    </ul>
+
+                    <!-- nav-toggler for mobile version only -->
+                    <button class="nav-toggler">
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </div><!-- navbar-area end -->
+
+        <div class="wrapper">
+            <div class="wrapper-text">
+                <h2>Find cheap bus tickets for your next trip</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip
+                </p>
+
+                <div class="btn">
+                    <button class="subscribe-btn">Learn More</button>
+                    <button class="subscribe-btn" style="background: transparent;border: 2px solid;">Book Now</button>
+                </div>
+            </div>
+            <form action="#" class="card-content">
+                <div class="Search_box">
+                    <!-- <div class="image">
+                            <i class="fas fa-envelope"></i>
+                        </div> -->
+                    <h1>Bus Booking</h1>
+                    <!-- <p>Subscribe to our newsletter and stay updated.</p> -->
+                    <div class="form-input">
+                        <p>From City</p>
+                        <label for="Text"></label>
+                        <input type="Text" list="from_city" placeholder="From">
+                        <datalist id="from_city">
+                            <option value="Amaravati, Andhra Pradesh">Amaravati, Andhra Pradesh</option>
+                            <option value="Adoni, Andhra Pradesh">Adoni, Andhra Pradesh</option>
+                        </datalist>
+                        <p style="left: 78px;">To City</p>
+                        <label for="Text"></label>
+                        <input type="text" placeholder="To">
+                        <p style="left: 70px;">Date</p>
+                        <label for="date"></label>
+                        <input type="date" placeholder="From Date" id="currentDate" />
+                        <button class="subscribe-btn">Search</button>
+                    </div>
+                    <!-- <div> <h4>From City</h4></div> -->
+            </form>
+        </div>
+    </header>
+
+    <section class="offers-container swiper">
+        <div class="slide-content">
+            <div class="offer-heading">
+                <h1>Best Deals on Bus booking</h1>
+            </div>
+            <div class="card-wrapper swiper-wrapper">
+
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <div class="card-image">
+                            <img src="images/Offer_1.png" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="offers-card-content">
+                        <h2>Get ₹300 Instant Discount On Your First Booking</h2>
+                    </div>
+
+                    <div class="book-now">
+                        <a href="" class="card-book-now">Book now</a>
+                        <i class='fa fa-caret-right' style='color: black'></i>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <div class="card-image">
+                            <img src="images/Offer_1.png" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="offers-card-content">
+                        <h2>Get ₹300 Instant Discount On Your First Booking</h2>
+                    </div>
+
+                    <div class="book-now">
+                        <a href="" class="card-book-now">Book now</a>
+                        <i class='fa fa-caret-right' style='color: black'></i>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <div class="card-image">
+                            <img src="images/Offer_1.png" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="offers-card-content">
+                        <h2>Get ₹300 Instant Discount On Your First Booking</h2>
+                    </div>
+
+                    <div class="book-now">
+                        <a href="" class="card-book-now">Book now</a>
+                        <i class='fa fa-caret-right' style='color: black'></i>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <div class="card-image">
+                            <img src="images/Offer_1.png" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="offers-card-content">
+                        <h2>Get ₹300 Instant Discount On Your First Booking</h2>
+                    </div>
+
+                    <div class="book-now">
+                        <a href="" class="card-book-now">Book now</a>
+                        <i class='fa fa-caret-right' style='color: black'></i>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <div class="card-image">
+                            <img src="images/Offer_1.png" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="offers-card-content">
+                        <h2>Get ₹300 Instant Discount On Your First Booking</h2>
+                    </div>
+
+                    <div class="book-now">
+                        <a href="" class="card-book-now">Book now</a>
+                        <i class='fa fa-caret-right' style='color: black'></i>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <div class="card-image">
+                            <img src="images/Offer_1.png" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="offers-card-content">
+                        <h2>Get ₹300 Instant Discount On Your First Booking</h2>
+                    </div>
+
+                    <div class="book-now">
+                        <a href="" class="card-book-now">Book now</a>
+                        <i class='fa fa-caret-right' style='color: black'></i>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <div class="card-image">
+                            <img src="images/Offer_1.png" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="offers-card-content">
+                        <h2>Get ₹300 Instant Discount On Your First Booking</h2>
+                    </div>
+
+                    <div class="book-now">
+                        <a href="" class="card-book-now">Book now</a>
+                        <i class='fa fa-caret-right' style='color: black'></i>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <div class="card-image">
+                            <img src="images/Offer_1.png" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="offers-card-content">
+                        <h2>Get ₹300 Instant Discount On Your First Booking</h2>
+                    </div>
+
+                    <div class="book-now">
+                        <a href="" class="card-book-now">Book now</a>
+                        <i class='fa fa-caret-right' style='color: black'></i>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <div class="card-image">
+                            <img src="images/Offer_1.png" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="offers-card-content">
+                        <h2>Get ₹300 Instant Discount On Your First Booking</h2>
+                    </div>
+
+                    <div class="book-now">
+                        <a href="" class="card-book-now">Book now</a>
+                        <i class='fa fa-caret-right' style='color: black'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </section>
+    <section id="About-us">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://trumpwallpapers.com/wp-content/uploads/Bus-Wallpaper-05-3840x2400-1-scaled.jpg"
+                    alt="">
+            </div>
+            <div class="about-text">
+                <h2>About BlueBus</h2>
+                <h1>BlueBus - India's fastest growing ticket booking platform</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat nostrum sunt labore nihil. Placeat,
+                    aliquam ad? Ducimus perspiciatis explicabo consectetur officiis cum? Molestias neque ullam impedit
+                    hic
+                    quaerat doloremque rem!</p>
+                <a href=""><button>More About Us</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="routes-section">
+        <h1 class="h-primary center" style="color: black;">Top Routes</h1>
+        <div class="outerbox">
+            <div class="innerbox">
+                <a href="">Mumbai To Hyderabad</a>
+                <button class="book-btn">Book Now</button>
+            </div>
+            <div class="innerbox">
+                <a href="">Mumbai To Delhi</a>
+                <button class="book-btn">Book Now</button>
+            </div>
+            <div class="innerbox">
+                <a href="">Mumbai To Goa</a>
+                <button class="book-btn">Book Now</button>
+            </div>
+            <div class="innerbox">
+                <a href="">Indore To Bhopal</a>
+                <button class="book-btn">Book Now</button>
+            </div>
+            <div class="innerbox">
+                <a href="">Hyderabad To Bengaluru</a>
+                <button class="book-btn-1">Book Now</button>
+            </div>
+            <div class="innerbox">
+                <a href="">Bengaluru To Chennai</a>
+                <button class="book-btn-1">Book Now</button>
+            </div>
+            <div class="innerbox">
+                <a href="">Vijayawada To Hyderabad</a>
+                <button class="book-btn-1">Book Now</button>
+            </div>
+            <div class="innerbox">
+                <a href="">Chennai To Bengaluru</a>
+                <button class="book-btn-1">Book Now</button>
+            </div>
+            <div class="innerbox">
+                <a href="">Hyderabad To Vijayawada</a>
+                <button class="book-btn-2">Book Now</button>
+            </div>
+            <div class="innerbox">
+                <a href="">Chennai To Coimbatore</a>
+                <button class="book-btn-2">Book Now</button>
+            </div>
+            <div class="innerbox">
+                <a href="">Hyderabad To Mumbai</a>
+                <button class="book-btn-2">Book Now</button>
+            </div>
+            <div class="innerbox">
+                <a href="">Delhi To Mumbai</a>
+                <button class="book-btn-2">Book Now</button>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="services-section">
+        <div class="services-heading">
+            <h1>OUR BEST SERVICES</h1>
+            <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit
+                ultrices.</p>
+        </div>
+
+        <div id="services-content">
+            <div class="services-box">
+                <img src="images/1077976.png" alt="">
+                <h2>LOWEST PRICES</h2>
+                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a class="services-btn" href="">Read More</a>
+            </div>
+            <div class="services-box">
+                <img src="images/6151135.png" alt="">
+                <h2>ULTIMATE COMFORT</h2>
+                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a class="services-btn" href="" style="color: white; background-color: #387cbd;">Read More</a>
+            </div>
+            <div class="services-box">
+                <img src="images/2038772.png" alt="">
+                <h2>FREE CANCELLATION & REFUNDS</h2>
+                <p class="center-services" style="margin: -20px 0 0 15px;">Sample text. Lorem ipsum dolor sit amet,
+                    consectetur
+                    adipiscing elit.</p>
+                <a class="services-btn" href="">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievement-block">
+        <div class="achievement-text">
+            <h1>THE NUMBERS ARE GROWING</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur natus, facere asperiores neque
+                ipsum obcaecati expedita laborum nostrum quis. Debitis.</p>
+        </div>
+        <div class="achievement-content">
+            <div class="achievement-box">
+                <div id="dot">
+                    <img src="images/308.png" alt="">
+                </div>
+                <h3>1000+</h3>
+                <h4>BUSES</h4>
+                <p> Total No. of Buses
+                    Currently Being Tracked</p>
+            </div>
+            <div class="achievement-box">
+                <div id="dot">
+                    <img src="images/681494.png" alt="">
+                </div>
+                <h3> 10 M</h3>
+                <h4>CUSTOMERS</h4>
+                <p> BlueBus is trusted by over
+                    10 million happy customers
+                    globally</p>
+            </div>
+            <div class="achievement-box">
+                <div id="dot">
+                    <img src="images/175613.png" alt="">
+                </div>
+                <h3> 120 M</h3>
+                <h4> BUS TICKETS</h4>
+                <p> Over 120 million trips
+                    booked using BlueBus</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer-section">
+        <div class="footer-icon">
+            <div class="footer-box">
+                <span class="dot-contact">
+                    <i class='fa fa-phone' style="color: white;"></i>
+                </span>
+                <div class="footer-icon-text">
+                    <p>(+00) 1234 5678</p>
+                </div>
+            </div>
+            <div class="footer-box" style="background: #1c1c1c;">
+                <span class="dot-contact">
+                    <i class='fa fa-envelope' style='color: white'></i>
+                </span>
+                <div class="footer-icon-text">
+                    <p>info@email.com</p>
+                </div>
+            </div>
+            <div class="footer-box" style="background: #252525;">
+                <span class="dot-location">
+                    <i class="fa fa-map-marker"></i>
+                </span>
+                <div class="footer-icon-text">
+                    <p>203 Fake St. Mountain View, San Francisco, California, USA</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer-row">
+            <div class="footer-column-input">
+                <div class="footer-info">
+                    <div class="footer-row">
+                        <h2>About</h2>
+                        <ul class="about-list">
+                            <li>
+                                <a href="">Home</a>
+                            </li>
+                            <li>
+                                <a href="">About Us</a>
+                            </li>
+                            <li>
+                                <a href="">Services</a>
+                            </li>
+                            <li>
+                                <a href="">Career</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-row">
+                        <h2>Resouces</h2>
+                        <ul class="Resources-list">
+                            <li>
+                                <a href="">Offers</a>
+                            </li>
+                            <li>
+                                <a href="">Cancel & Refunds</a>
+
+                            </li>
+                            <li>
+                                <a href="">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="">Terms</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-row">
+                        <h2>Company</h2>
+                        <ul class="Resources-list">
+                            <li>
+                                <a href="">Contact Us</a>
+
+                            </li>
+                            <li>
+                                <a href="">FAQ's</a>
+                            </li>
+                            <li>
+                                <a href="">FAQ's</a>
+                            </li>
+                            <li>
+                                <a href="">FAQ's</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-subscribe">
+                        <h2 class="footer-heading">Subscribe</h2>
+                        <form class="subscribe-form">
+                            <div class="subscribe-contact">
+                                <input type="text" class="subscribe-input" placeholder="Enter email address">
+                                <button type="submit" class="form-control submit rounded-right">Subscribe</button>
+                            </div>
+                            <p>Get Marketing updates in your mailbox</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-social-contacts">
+        <div class="footer-container">
+            <div class="footer-copyright-text">
+                <p>Copyright © 2019, All Right Reserved Seobin</p>
+            </div>
+
+            <div class="social-icon">
+                <a href=""><span class="dot-social"><i class='fa fa-facebook'
+                            style='color: white; margin: 10px 14px'></i></span></a>
+                <a href=""><span class="dot-social"><i class='fa fa-instagram' style='color: white'></i></span></a>
+                <a href=""><span class="dot-social"><i class='fa fa-twitter' style='color: white'></i></span></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="javascript/script.js"></script>
+    <script>
+        var swiper = new Swiper(".slide-content", {
+            slidesPerView: 3,
+            spaceBetween: 25,
+            loop: true,
+            centerSlide: 'true',
+            fade: 'true',
+            grabCursor: 'true',
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                520: {
+                    slidesPerView: 2,
+                },
+                950: {
+                    slidesPerView: 3,
+                }
+            },
+        });
+    </script>
+</body>
+
+</html>
