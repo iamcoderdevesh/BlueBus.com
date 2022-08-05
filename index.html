@@ -6,10 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/styles.css">
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
     <style>
@@ -23,106 +27,449 @@
             font-size: 30px;
             font-weight: bold;
         }
-
-        /* .services-btn {
-            position: relative;
-            top: 170px;
-        }
-
-        #services-content .services-box p {
-            position: relative;
-            top: 45px;
-        } */
     </style>
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <header class="header-area">
-        <div class="image-edit"></div>
-        <!-- site-navbar start -->
-        <div class="navbar-area">
-            <div class="container">
-                <nav class="site-navbar">
-                    <!-- site logo -->
-                    <a href="#home" class="site-logo">logo</a>
+    <section class="header-navbar">
+        <a href="#" class="header__logo">LOGO</a>
 
-                    <!-- site menu/nav -->
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <!-- <li><a href="#">My Bookings</a></li> -->
-                        <div class="dropdown">
-                            <button class="dropbtn">My Bookings
-                                <i class="fa fa-caret-down"></i>
-                            </button>
-                            <div class="dropdown-content">
-                                <a href="#">Print Ticket</a>
-                                <a href="#">Cancel Ticket</a>
-                            </div>
-                        </div>
-                        <li><a href="#">Offers</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <!-- <li><a href="#">Sign in</a></li> -->
-                        <div class="dropdown">
-                            <button class="dropbtn">Sign in
-                                <i class="fa fa-caret-down"></i>
-                            </button>
-                            <div class="dropdown-content">
-                                <a href="#">Login</a>
-                                <a href="#">Sign Up</a>
-                            </div>
-                        </div>
+        <i class='bx bx-menu header__toggle' id="header-toggle"></i>
+
+        <div class="navbar" id="nav-menu">
+            <div class="nav__content bd-grid">
+                <a href="" class="nav__perfil">
+                    <div class="nav__img">
+                        <img src="images/logo.png" alt="">
+                    </div>
+
+                </a>
+
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="../index.html" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="pages/About.html" class="nav__link">About-Us</a></li>
+
+                        <li class="nav__item dropdown">
+                            <a href="#" class="nav__link dropdown__link">Services <i
+                                    class='bx bx-chevron-down dropdown__icon'></i></a>
+
+
+                            <ul class="dropdown__menu">
+                                <li class="dropdown__item"><a href="pages/Career.html" class="nav__link">Career</a></li>
+                                <li class="dropdown__item"><a href="pages/FAQ's.html" class="nav__link">FAQ's</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav__item"><a href="pages/Offers.html" class="nav__link">Offers</a></li>
+
+                        <li class="nav__item dropdown">
+                            <a href="#" class="nav__link dropdown__link">My Bookings <i
+                                    class='bx bx-chevron-down dropdown__icon'></i></a>
+
+
+                            <ul class="dropdown__menu">
+                                <li class="dropdown__item"><a href="pages/Print_booking.html" class="nav__link">Print
+                                        Ticket</a></li>
+                                <li class="dropdown__item"><a href="pages/Cancel_booking.html" class="nav__link">Cancel
+                                        Ticket</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav__item"><a href="pages/contact.html" class="nav__link">Contact</a></li>
                     </ul>
-
-                    <!-- nav-toggler for mobile version only -->
-                    <button class="nav-toggler">
-                        <span></span>
-                    </button>
-                </nav>
-            </div>
-        </div><!-- navbar-area end -->
-
-        <div class="wrapper">
-            <div class="wrapper-text">
-                <h2>Find cheap bus tickets for your next trip</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip
-                </p>
-
-                <div class="btn">
-                    <button class="subscribe-btn">Learn More</button>
-                    <button class="subscribe-btn" style="background: transparent;border: 2px solid;">Book Now</button>
+                </div>
+                <div class="nav__perfil">
+                    <div class="login-tab">
+                        <div class="login-tab-wrapper">
+                            <span class="hover-effect-login"></span>
+                            <i class='bx bxs-user-circle'></i>
+                            <a href="pages/Login.html" class="nav__link" id="login-btn">Login / Sign-up</a>
+                            <i class='bx bx-chevron-down'></i>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <form action="#" class="card-content">
-                <div class="Search_box">
-                    <!-- <div class="image">
-                            <i class="fas fa-envelope"></i>
-                        </div> -->
-                    <h1>Bus Booking</h1>
-                    <!-- <p>Subscribe to our newsletter and stay updated.</p> -->
-                    <div class="form-input">
-                        <p>From City</p>
-                        <label for="Text"></label>
-                        <input type="Text" list="from_city" placeholder="From">
-                        <datalist id="from_city">
-                            <option value="Amaravati, Andhra Pradesh">Amaravati, Andhra Pradesh</option>
-                            <option value="Adoni, Andhra Pradesh">Adoni, Andhra Pradesh</option>
-                        </datalist>
-                        <p style="left: 78px;">To City</p>
-                        <label for="Text"></label>
-                        <input type="text" placeholder="To">
-                        <p style="left: 70px;">Date</p>
-                        <label for="date"></label>
-                        <input type="date" placeholder="From Date" id="currentDate" />
-                        <button class="subscribe-btn">Search</button>
-                    </div>
-                    <!-- <div> <h4>From City</h4></div> -->
-            </form>
         </div>
+    </section>
+
+    <section id="home-section">
+        <div class="content">
+            <h1>Find cheap bus tickets for your next trip</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt<br> ut labore
+                et
+                dolore magna aliqua. Ut enim ad minim veniam,<br> quis nostrud exercitation ullamco laboris
+            </p>
+            <div class="home-btn">
+                <button type="button"><span class="hover-effect"></span>Learn More</button>
+                <button type="button"><span class="hover-effect"></span>Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <form action="#" class="card-content">
+        <div class="Search_box">
+            <h1>Bus Booking</h1>
+            <div class="form-input">
+                <p>From City</p>
+                <label for="Text"></label>
+                <input type="Text" list="from_city" placeholder="From" /required>
+                <datalist id="from_city">
+                    <option value="Amaravati, Andhra Pradesh">Amaravati, Andhra Pradesh</option>
+                    <option value="Adoni, Andhra Pradesh">Adoni, Andhra Pradesh</option>
+                    <option value="Anantapur, Andhra Pradesh">Anantapur, Andhra Pradesh</option>
+                    <option value="Chandragiri, Andhra Pradesh">Chandragiri, Andhra Pradesh</option>
+                    <option value="Chittoor, Andhra Pradesh">Chittoor, Andhra Pradesh</option>
+                    <option value="Dowlaiswaram, Andhra Pradesh">Dowlaiswaram, Andhra Pradesh</option>
+                    <option value="Eluru, Andhra Pradesh">Eluru, Andhra Pradesh</option>
+                    <option value="Guntur, Andhra Pradesh">Guntur, Andhra Pradesh</option>
+                    <option value="Kadapa, Andhra Pradesh">Kadapa, Andhra Pradesh</option>
+                    <option value="Kakinada, Andhra Pradesh">Kakinada, Andhra Pradesh</option>
+                    <option value="Kurnool, Andhra Pradesh">Kurnool, Andhra Pradesh</option>
+                    <option value="Machilipatnam, Andhra Pradesh">Machilipatnam, Andhra Pradesh</option>
+                    <option value="Nagarjunakoṇḍa, Andhra Pradesh">Nagarjunakoṇḍa, Andhra Pradesh</option>
+                    <option value="Rajahmundry, Andhra Pradesh">Rajahmundry, Andhra Pradesh</option>
+                    <option value="Srikakulam, Andhra Pradesh">Srikakulam, Andhra Pradesh</option>
+                    <option value="Tirupati, Andhra Pradesh">Tirupati, Andhra Pradesh</option>
+                    <option value="Vijayawada, Andhra Pradesh">Vijayawada, Andhra Pradesh</option>
+                    <option value="Visakhapatnam, Andhra Pradesh">Visakhapatnam, Andhra Pradesh</option>
+                    <option value="Vizianagaram, Andhra Pradesh">Vizianagaram, Andhra Pradesh</option>
+                    <option value="Yemmiganur,, Andhra Pradesh">Yemmiganur, Andhra Pradesh</option>
+                    <option value="Itanagar, Andhra Pradesh">Itanagar, Arunachal Pradesh</option>
+                    <option value="Dhuburi, Assam">Dhuburi, Assam</option>
+                    <option value="Guwahati, Assam">Guwahati, Assam</option>
+                    <option value="Jorhat, Assam">Jorhat, Assam</option>
+                    <option value="Ara, Assam">Ara, Assam</option>
+                    <option value="Barauni, Assam">Barauni, Assam</option>
+                    <option value="Bettiah, Assam">Bettiah, Assam</option>
+                    <option value="Bhagalpur, Assam">Bhagalpur, Assam</option>
+                    <option value="Bihar Sharif, Assam">Bihar Sharif, Assam</option>
+                    <option value=" Chandigarh,Chandigarh">Chandigarh, Chandigarh</option>
+                    <option value=" Ambikapur,Chhattisgarh">Ambikapur, Chhattisgarh</option>
+                    <option value=" Bhilai,Chhattisgarh">Bhilai, Chhattisgarh</option>
+                    <option value=" Raipur,Chhattisgarh">Raipur, Chhattisgarh</option>
+                    <option value=" Jagdalpur,Chhattisgarh">Jagdalpur, Chhattisgarh</option>
+                    <option value=" Rajnandgaon,Chhattisgarh">Rajnandgaon, Chhattisgarh</option>
+                    <option value=" Chandigarh,Chhattisgarh">Chandigarh, Chhattisgarh</option>
+                    <option value=" Silvassa,Dadra and Nagar Haveli and Daman and Diu">Silvassa,Dadra and Nagar Haveli
+                        and Daman and Diu </option>
+                    <option value=" Diu,Dadra and Nagar Haveli and Daman and Diu">Diu,Dadra and Nagar Haveli and Daman
+                        and Diu</option>
+                    <option value=" Daman,Dadra and Nagar Haveli and Daman and Diu">Daman,Dadra and Nagar Haveli and
+                        Daman and Diu</option>
+                    <option value=" Delhi,Delhi">Delhi, Delhi</option>
+                    <option value=" New Delhi,Delhi"> New Delhi, Delhi</option>
+                    <option value=" Madgaon,Goa"> Madgaon, Goa</option>
+                    <option value=" Panaji, Goa"> Panaji, Goa</option>
+                    <option value=" Ahmadabad,Gujarat"> Ahmadabad, Gujarat</option>
+                    <option value=" Bhuj,Gujarat"> Bhuj, Gujarat</option>
+                    <option value=" Gandhinagar,Gujarat"> Gandhinagar, Gujarat</option>
+                    <option value=" Jamnagar,Gujarat"> Jamnagar, Gujarat</option>
+                    <option value=" Kandla,Gujarat"> Kandla, Gujarat</option>
+                    <option value=" Ambala,Haryana"> Ambala, Haryana</option>
+                    <option value=" Bhiwani, Haryana"> Bhiwani, Haryana</option>
+                    <option value=" Faridabad, Haryana">Faridabad , Haryana</option>
+                    <option value="Panipat ,Haryana"> Panipat, Haryana</option>
+                    <option value="Bilaspur,Himachal Pradesh"> Bilaspur, Himachal Pradesh
+                    </option>
+                    <option value="Chamba,Himachal Pradesh"> Chamba, Himachal Pradesh
+                    </option>
+                    <option value="Dharmshala,Himachal Pradesh"> Dharmshala, Himachal Pradesh</option>
+                    <option value="Shimla,Himachal Pradesh"> Shimla, Himachal Pradesh</option>
+                    <option value="Sonipat,Himachal Pradesh"> sonipat, Himachal Pradesh</option>
+                    <option value="Srinagar,jammu and kashmir"> Srinagar, jammu and kashmir </option>
+                    <option value="Udhampur,jammu and kashmir"> Udhampur, jammu and kashmir</option>
+                    <option value="Doda, jammu and kashmir"> Doda, jammu and kashmir</option>
+                    <option value="Jammu,jammu and kashmir"> Jammu, jammu and kashmir</option>
+                    <option value="Bokaro,Jharkhand"> Bokaro, Jharkhand</option>
+                    <option value="Deoghar, Jharkhand"> Deoghar, Jharkhand</option>
+                    <option value="Jammu,Jharkhand"> Jammu, JharkhaJharkhandnd</option>
+                    <option value="Dhanbad,Jharkhand"> Dhanbad, Jharkhand</option>
+                    <option value="Jamshedpur,Jharkhand"> , Jamshedpur, Jharkhand</option>
+                    <option value="Bengaluru,  Karnataka"> Bengaluru, Jharkhand</option>
+                    <option value="Belagavi,jammu and kashmir"> Belagavi, </option>
+                    <option value="Davangere, karnataka"> Jammu, karnataka</option>
+                    <option value="Hassan,karnataka"> Hassan, karnataka</option>
+                    <option value="Hubballi-Dharwad,karnataka"> Hubballi-Dharwad, karnataka</option>
+                    <option value="Kalaburagi,karnataka"> Kalaburagi, karnataka</option>
+                    <option value="Vijayapura,karnataka"> Vijayapura, karnataka</option>
+                    <option value="Raichur,karnataka"> Raichur, karnataka</option>
+                    <option value="Kannur,Kerala"> Kannur, Kerala</option>
+                    <option value="Palakkad,Kerala"> Palakkad, Kerala</option>
+                    <option value="Kollam,Kerala"> Kollam, Kerala</option>
+                    <option value="Kochi,Kerala"> Kochi, Kerala</option>
+                    <option value="Thiruvananthapuram,Kerala"> Thiruvananthapuram, Kerala</option>
+                    <option value="Thalassery,Kerala"> Thalassery, Kerala</option>
+                    <option value="Kargil,Ladakh"> Kargil,Ladakh</option>
+                    <option value="Leh,Ladakh"> Leh, Ladakh</option>
+                    <option value="Bhopal,Madhya Pradesh"> Bhopal, Madhya Pradesh</option>
+                    <option value="Bhojpur,Madhya Pradesh"> Bhojpur, Madhya Pradesh</option>
+                    <option value="Shivpuri,Madhya Pradesh"> Shivpuri, Madhya Pradesh</option>
+                    <option value="Vidisha,Madhya Pradesh"> Vidisha, Madhya Pradesh</option>
+                    <option value="Satna,Madhya Pradesh"> Satna, Madhya Pradesh</option>
+                    <option value="Dr. Ambedkar Nagar (Mhow),Madhya Pradesh"> Dr. Ambedkar Nagar (Mhow), Madhya Pradesh
+                    </option>
+                    <option value="Indore,Madhya Pradesh"> Indore, Madhya Pradesh</option>
+                    <option value="Jabalpur,Madhya Pradesh"> Jabalpur, Madhya Pradesh</option>
+                    <option value="Khandwa,Madhya Pradesh"> Khandwa, Madhya Pradesh</option>
+                    <option value="Satna,Madhya Pradesh"> Satna, Madhya Pradesh</option>
+                    <option value="Amravati,Maharashtra"> Amravati, Maharashtra</option>
+                    <option value="Aurangabad,Maharashtra"> Aurangabad, Maharashtra</option>
+                    <option value="Amravati,Maharashtra"> Amravati, Maharashtra</option>
+                    <option value="Jalgaon,Maharashtra"> Jalgaon, Maharashtra</option>
+                    <option value="Kalyan,Maharashtra"> Kalyan, Maharashtra</option>
+                    <option value="Nashik,Maharashtra"> Nashik, Maharashtra</option>
+                    <option value="Nagpur,Maharashtra"> Nagpur, Maharashtra</option>
+                    <option value="Mumbai, Maharashtra"> Mumbai, Maharashtra</option>
+                    <option value="Pune,Maharashtra"> Pune, Maharashtra</option>
+                    <option value="Satara,Maharashtra"> Satara, Maharashtra</option>
+                    <option value="Thane,Maharashtra"> Thane, Maharashtra</option>
+                    <option value="Vasai-Virar,Maharashtra"> Vasai-Virar, Maharashtra</option>
+                    <option value="Ulhasnagar,Maharashtra">Ulhasnagar, Maharashtra</option>
+                    <option value="Imphal,Manipur"> Imphal, Manipur</option>
+                    <option value="Cherrapunji,Meghalaya"> Cherrapunji, Meghalaya</option>
+                    <option value="Shillong,Meghalaya"> Shillong, Meghalaya</option>
+                    <option value="Aizawl,Mizoram"> Aizawl, Mizoram</option>
+                    <option value="Lunglei,Mizoram"> Lunglei,mizoram</option>
+                    <option value="Wokha,Nagaland"> Wokha, Nagaland</option>
+                    <option value="Phek,Nagaland"> Phek, Nagaland</option>
+                    <option value="Zunheboto,Nagaland"> Zunheboto, Nagaland</option>
+                    <option value="Bhubaneshwar,Odisha"> Bhubaneshwar, Odisha</option>
+                    <option value="Cuttack,Odisha"> Cuttack, Odisha</option>
+                    <option value="Sambalpur,Odisha"> Sambalpur, Odisha</option>
+                    <option value="Phulabani,odisha"> Phulabani, Odisha</option>
+                    <option value="Konark,Odisha"> Konark, Odisha</option>
+                    <option value="Phulabani,odisha"> Phulabani, Odisha</option>
+                    <option value="Puducherry ,Puducherry "> Puducherry , Puducherry </option>
+                    <option value="Karaikal,Puducherry "> Karaikal, Puducherry </option>
+                    <option value="Amritsar,Punjab "> Amritsar, Punjab </option>
+                    <option value="Jalandhar,Punjab"> Jalandhar, Punjab </option>
+                    <option value="Chandigarh,Punjab"> Chandigarh, Punjab </option>
+                    <option value="Ludhiana,Punjab "> Ludhiana, Punjab </option>
+                    <option value="patiala,Punjab"> patiala, Punjab </option>
+                    <option value="Rupnagar,punjab "> Rupnagar, punjab </option>
+                    <option value="Ajmer,Rajasthan "> Ajmer, Rajasthan </option>
+                    <option value="Bikaner,Rajasthan"> Bikaner, Rajasthan </option>
+                    <option value="Dungarpur,Rajasthan "> Dungarpur, Rajasthan </option>
+                    <option value="Jaipur,Rajasthan "> Jaipur, Rajasthan </option>
+                    <option value="Jaisalmer,Rajasthan "> Jaisalmer, Rajasthan </option>
+                    <option value="Kota ,Rajasthan "> Kota , Rajasthan </option>
+                    <option value="Jodhpur,Rajasthan"> Jodhpur, Rajasthan </option>
+                    <option value="Kota ,Rajasthan "> Kota , Rajasthan </option>
+                    <option value="Mangan ,Sikkim "> Mangan, Sikkim</option>
+                    <option value="Lachung ,Sikkim"> Lachung, Sikkim</option>
+                    <option value="Gangtok,Sikkim "> Gangtok, Sikkim </option>
+                    <option value="Chennai,Tamil Nadu"> Chennai, Tamil Nadu </option>
+                    <option value="Coimbatore,Tamil Nadu"> Coimbatore, Tamil Nadu </option>
+                    <option value="Nagercoil,Tamil Nadu"> Nagercoil , Tamil Nadu</option>
+                    <option value="Vellore,Tamil Nadu"> Vellore , Tamil Nadu</option>
+                    <option value="Tiruchchirappalli,Tamil Nadu"> Tiruchchirappalli , Tamil Nadu</option>
+                    <option value="Kanniyakumari,Tamil Nadu"> Kanniyakumari, Tamil Nadu</option>
+                    <option value="Hyderabad,Telangana"> Hyderabad, Telangana</option>
+                    <option value="Nizamabad,Telangana"> Nizamabad, Telangana</option>
+                    <option value="Warangal,Telangana"> Warangal, Telangana</option>
+                    <option value="Karimnagar,Telangana"> Karimnagar, Telangana</option>
+                    <option value="Agartala,Tripura"> Agartala, Tripura</option>
+                    <option value="Agra,Uttar Pradesh"> Agra, Uttar Pradesh</option>
+                    <option value="Faizabad,Uttar Pradesh"> Faizabad, Uttar Pradesh</option>
+                    <option value="Jhansi,Uttar Pradesh"> Jhansi, Uttar Pradesh</option>
+                    <option value="Lucknow,Uttar Pradesh"> Lucknow, Uttar Pradesh</option>
+                    <option value="Varanasi,Uttar Pradesh"> Varanasi, Uttar Pradesh</option>
+                    <option value="Ghaziabad,Uttar Pradesh"> Ghaziabad, Uttar Pradesh</option>
+                    <option value="Shahjahanpur,Uttar Pradesh"> Shahjahanpur, Uttar Pradesh</option>
+                    <option value="Dehra Dun, Uttarakhand"> Dehra Dun, Uttarakhand</option>
+                    <option value="Haridwar, Uttarakhand"> Haridwar, Uttarakhand</option>
+                    <option value="Nainital, Uttarakhand"> Nainital, Uttarakhand</option>
+                    <option value="Asansol, West Bengal"> Asansol, West Bengal</option>
+                    <option value="Darjeeling, West Bengal"> Darjeeling, West Bengal</option>
+                    <option value="Dum Dum, West Bengal"> Dum Dum, West Bengal</option>
+                    <option value="Kolkata, West Bengal"> Kolkata, West Bengal</option>
+                    <option value="Siliguri, West Bengal"> Siliguri, West Bengal</option>
+                    <option value="Titagarh, West Bengal"> Titagarh, West Bengal</option>
+                </datalist>
+                <p style="left: 78px;">To City</p>
+                <label for="Text"></label>
+                <input type="text" list="to_city" placeholder="To" /required>
+                <datalist id="to_city">
+                    <option value="Amaravati, Andhra Pradesh">Amaravati, Andhra Pradesh</option>
+                    <option value="Adoni, Andhra Pradesh">Adoni, Andhra Pradesh</option>
+                    <option value="Anantapur, Andhra Pradesh">Anantapur, Andhra Pradesh</option>
+                    <option value="Chandragiri, Andhra Pradesh">Chandragiri, Andhra Pradesh</option>
+                    <option value="Chittoor, Andhra Pradesh">Chittoor, Andhra Pradesh</option>
+                    <option value="Dowlaiswaram, Andhra Pradesh">Dowlaiswaram, Andhra Pradesh</option>
+                    <option value="Eluru, Andhra Pradesh">Eluru, Andhra Pradesh</option>
+                    <option value="Guntur, Andhra Pradesh">Guntur, Andhra Pradesh</option>
+                    <option value="Kadapa, Andhra Pradesh">Kadapa, Andhra Pradesh</option>
+                    <option value="Kakinada, Andhra Pradesh">Kakinada, Andhra Pradesh</option>
+                    <option value="Kurnool, Andhra Pradesh">Kurnool, Andhra Pradesh</option>
+                    <option value="Machilipatnam, Andhra Pradesh">Machilipatnam, Andhra Pradesh</option>
+                    <option value="Nagarjunakoṇḍa, Andhra Pradesh">Nagarjunakoṇḍa, Andhra Pradesh</option>
+                    <option value="Rajahmundry, Andhra Pradesh">Rajahmundry, Andhra Pradesh</option>
+                    <option value="Srikakulam, Andhra Pradesh">Srikakulam, Andhra Pradesh</option>
+                    <option value="Tirupati, Andhra Pradesh">Tirupati, Andhra Pradesh</option>
+                    <option value="Vijayawada, Andhra Pradesh">Vijayawada, Andhra Pradesh</option>
+                    <option value="Visakhapatnam, Andhra Pradesh">Visakhapatnam, Andhra Pradesh</option>
+                    <option value="Vizianagaram, Andhra Pradesh">Vizianagaram, Andhra Pradesh</option>
+                    <option value="Yemmiganur, Andhra Pradesh">Yemmiganur, Andhra Pradesh</option>
+                    <option value="Itanagar, Andhra Pradesh">Itanagar, Arunachal Pradesh</option>
+                    <option value="Dhuburi, Assam">Dhuburi, Assam</option>
+                    <option value="Guwahati, Assam">Guwahati, Assam</option>
+                    <option value="Jorhat, Assam">Jorhat, Assam</option>
+                    <option value="Ara, Assam">Ara, Assam</option>
+                    <option value="Barauni, Assam">Barauni, Assam</option>
+                    <option value="Bettiah, Assam">Bettiah, Assam</option>
+                    <option value="Bhagalpur, Assam">Bhagalpur, Assam</option>
+                    <option value="Bihar Sharif, Assam">Bihar Sharif, Assam</option>
+                    <option value=" Chandigarh,Chandigarh">Chandigarh, Chandigarh</option>
+                    <option value=" Ambikapur,Chhattisgarh">Ambikapur, Chhattisgarh</option>
+                    <option value=" Bhilai,Chhattisgarh">Bhilai, Chhattisgarh</option>
+                    <option value=" Raipur,Chhattisgarh">Raipur, Chhattisgarh</option>
+                    <option value=" Jagdalpur,Chhattisgarh">Jagdalpur, Chhattisgarh</option>
+                    <option value=" Rajnandgaon,Chhattisgarh">Rajnandgaon, Chhattisgarh</option>
+                    <option value=" Chandigarh,Chhattisgarh">Chandigarh, Chhattisgarh</option>
+                    <option value=" Silvassa,Dadra and Nagar Haveli and Daman and Diu">Silvassa,Dadra and Nagar Haveli
+                        and Daman and Diu </option>
+                    <option value=" Diu,Dadra and Nagar Haveli and Daman and Diu">Diu,Dadra and Nagar Haveli and Daman
+                        and Diu</option>
+                    <option value=" Daman,Dadra and Nagar Haveli and Daman and Diu">Daman,Dadra and Nagar Haveli and
+                        Daman and Diu</option>
+                    <option value=" Delhi,Delhi">Delhi, Delhi</option>
+                    <option value=" New Delhi,Delhi"> New Delhi, Delhi</option>
+                    <option value=" Madgaon,Goa"> Madgaon, Goa</option>
+                    <option value=" Panaji, Goa"> Panaji, Goa</option>
+                    <option value=" Ahmadabad,Gujarat"> Ahmadabad, Gujarat</option>
+                    <option value=" Bhuj,Gujarat"> Bhuj, Gujarat</option>
+                    <option value=" Gandhinagar,Gujarat"> Gandhinagar, Gujarat</option>
+                    <option value=" Jamnagar,Gujarat"> Jamnagar, Gujarat</option>
+                    <option value=" Kandla,Gujarat"> Kandla, Gujarat</option>
+                    <option value=" Ambala,Haryana"> Ambala, Haryana</option>
+                    <option value=" Bhiwani, Haryana"> Bhiwani, Haryana</option>
+                    <option value=" Faridabad, Haryana">Faridabad , Haryana</option>
+                    <option value="Panipat ,Haryana"> Panipat, Haryana</option>
+                    <option value="Bilaspur,Himachal Pradesh"> Bilaspur, Himachal Pradesh
+                    </option>
+                    <option value="Chamba,Himachal Pradesh"> Chamba, Himachal Pradesh
+                    </option>
+                    <option value="Dharmshala,Himachal Pradesh"> Dharmshala, Himachal Pradesh</option>
+                    <option value="Shimla,Himachal Pradesh"> Shimla, Himachal Pradesh</option>
+                    <option value="Sonipat,Himachal Pradesh"> sonipat, Himachal Pradesh</option>
+                    <option value="Srinagar,jammu and kashmir"> Srinagar, jammu and kashmir </option>
+                    <option value="Udhampur,jammu and kashmir"> Udhampur, jammu and kashmir</option>
+                    <option value="Doda, jammu and kashmir"> Doda, jammu and kashmir</option>
+                    <option value="Jammu,jammu and kashmir"> Jammu, jammu and kashmir</option>
+                    <option value="Bokaro,Jharkhand"> Bokaro, Jharkhand</option>
+                    <option value="Deoghar, Jharkhand"> Deoghar, Jharkhand</option>
+                    <option value="Jammu,Jharkhand"> Jammu, JharkhaJharkhandnd</option>
+                    <option value="Dhanbad,Jharkhand"> Dhanbad, Jharkhand</option>
+                    <option value="Jamshedpur,Jharkhand"> , Jamshedpur, Jharkhand</option>
+                    <option value="Bengaluru,  Karnataka"> Bengaluru, Jharkhand</option>
+                    <option value="Belagavi,jammu and kashmir"> Belagavi, </option>
+                    <option value="Davangere, karnataka"> Jammu, karnataka</option>
+                    <option value="Hassan,karnataka"> Hassan, karnataka</option>
+                    <option value="Hubballi-Dharwad,karnataka"> Hubballi-Dharwad, karnataka</option>
+                    <option value="Kalaburagi,karnataka"> Kalaburagi, karnataka</option>
+                    <option value="Vijayapura,karnataka"> Vijayapura, karnataka</option>
+                    <option value="Raichur,karnataka"> Raichur, karnataka</option>
+                    <option value="Kannur,Kerala"> Kannur, Kerala</option>
+                    <option value="Palakkad,Kerala"> Palakkad, Kerala</option>
+                    <option value="Kollam,Kerala"> Kollam, Kerala</option>
+                    <option value="Kochi,Kerala"> Kochi, Kerala</option>
+                    <option value="Thiruvananthapuram,Kerala"> Thiruvananthapuram, Kerala</option>
+                    <option value="Thalassery,Kerala"> Thalassery, Kerala</option>
+                    <option value="Kargil,Ladakh"> Kargil,Ladakh</option>
+                    <option value="Leh,Ladakh"> Leh, Ladakh</option>
+                    <option value="Bhopal,Madhya Pradesh"> Bhopal, Madhya Pradesh</option>
+                    <option value="Bhojpur,Madhya Pradesh"> Bhojpur, Madhya Pradesh</option>
+                    <option value="Shivpuri,Madhya Pradesh"> Shivpuri, Madhya Pradesh</option>
+                    <option value="Vidisha,Madhya Pradesh"> Vidisha, Madhya Pradesh</option>
+                    <option value="Satna,Madhya Pradesh"> Satna, Madhya Pradesh</option>
+                    <option value="Dr. Ambedkar Nagar (Mhow),Madhya Pradesh"> Dr. Ambedkar Nagar (Mhow), Madhya Pradesh
+                    </option>
+                    <option value="Indore,Madhya Pradesh"> Indore, Madhya Pradesh</option>
+                    <option value="Jabalpur,Madhya Pradesh"> Jabalpur, Madhya Pradesh</option>
+                    <option value="Khandwa,Madhya Pradesh"> Khandwa, Madhya Pradesh</option>
+                    <option value="Satna,Madhya Pradesh"> Satna, Madhya Pradesh</option>
+                    <option value="Amravati,Maharashtra"> Amravati, Maharashtra</option>
+                    <option value="Aurangabad,Maharashtra"> Aurangabad, Maharashtra</option>
+                    <option value="Amravati,Maharashtra"> Amravati, Maharashtra</option>
+                    <option value="Jalgaon,Maharashtra"> Jalgaon, Maharashtra</option>
+                    <option value="Kalyan,Maharashtra"> Kalyan, Maharashtra</option>
+                    <option value="Nashik,Maharashtra"> Nashik, Maharashtra</option>
+                    <option value="Nagpur,Maharashtra"> Nagpur, Maharashtra</option>
+                    <option value="Mumbai,Maharashtra"> Mumbai, Maharashtra</option>
+                    <option value="Pune,Maharashtra"> Pune, Maharashtra</option>
+                    <option value="Satara,Maharashtra"> Satara, Maharashtra</option>
+                    <option value="Thane,Maharashtra"> Thane, Maharashtra</option>
+                    <option value="Vasai-Virar,Maharashtra"> Vasai-Virar, Maharashtra</option>
+                    <option value="Ulhasnagar,Maharashtra">Ulhasnagar, Maharashtra</option>
+                    <option value="Imphal,Manipur"> Imphal, Manipur</option>
+                    <option value="Cherrapunji,Meghalaya"> Cherrapunji, Meghalaya</option>
+                    <option value="Shillong,Meghalaya"> Shillong, Meghalaya</option>
+                    <option value="Aizawl,Mizoram"> Aizawl, Mizoram</option>
+                    <option value="Lunglei,Mizoram"> Lunglei,mizoram</option>
+                    <option value="Wokha,Nagaland"> Wokha, Nagaland</option>
+                    <option value="Phek,Nagaland"> Phek, Nagaland</option>
+                    <option value="Zunheboto,Nagaland"> Zunheboto, Nagaland</option>
+                    <option value="Bhubaneshwar,Odisha"> Bhubaneshwar, Odisha</option>
+                    <option value="Cuttack,Odisha"> Cuttack, Odisha</option>
+                    <option value="Sambalpur,Odisha"> Sambalpur, Odisha</option>
+                    <option value="Phulabani,odisha"> Phulabani, Odisha</option>
+                    <option value="Konark,Odisha"> Konark, Odisha</option>
+                    <option value="Phulabani,odisha"> Phulabani, Odisha</option>
+                    <option value="Puducherry ,Puducherry "> Puducherry , Puducherry </option>
+                    <option value="Karaikal,Puducherry "> Karaikal, Puducherry </option>
+                    <option value="Amritsar,Punjab "> Amritsar, Punjab </option>
+                    <option value="Jalandhar,Punjab"> Jalandhar, Punjab </option>
+                    <option value="Chandigarh,Punjab"> Chandigarh, Punjab </option>
+                    <option value="Ludhiana,Punjab "> Ludhiana, Punjab </option>
+                    <option value="patiala,Punjab"> patiala, Punjab </option>
+                    <option value="Rupnagar,punjab "> Rupnagar, punjab </option>
+                    <option value="Ajmer,Rajasthan "> Ajmer, Rajasthan </option>
+                    <option value="Bikaner,Rajasthan"> Bikaner, Rajasthan </option>
+                    <option value="Dungarpur,Rajasthan "> Dungarpur, Rajasthan </option>
+                    <option value="Jaipur,Rajasthan "> Jaipur, Rajasthan </option>
+                    <option value="Jaisalmer,Rajasthan "> Jaisalmer, Rajasthan </option>
+                    <option value="Kota ,Rajasthan "> Kota , Rajasthan </option>
+                    <option value="Jodhpur,Rajasthan"> Jodhpur, Rajasthan </option>
+                    <option value="Kota ,Rajasthan "> Kota , Rajasthan </option>
+                    <option value="Mangan ,Sikkim "> Mangan, Sikkim</option>
+                    <option value="Lachung ,Sikkim"> Lachung, Sikkim</option>
+                    <option value="Gangtok,Sikkim "> Gangtok, Sikkim </option>
+                    <option value="Chennai,Tamil Nadu"> Chennai, Tamil Nadu </option>
+                    <option value="Coimbatore,Tamil Nadu"> Coimbatore, Tamil Nadu </option>
+                    <option value="Nagercoil,Tamil Nadu"> Nagercoil , Tamil Nadu</option>
+                    <option value="Vellore,Tamil Nadu"> Vellore , Tamil Nadu</option>
+                    <option value="Tiruchchirappalli,Tamil Nadu"> Tiruchchirappalli , Tamil Nadu</option>
+                    <option value="Kanniyakumari,Tamil Nadu"> Kanniyakumari, Tamil Nadu</option>
+                    <option value="Hyderabad,Telangana"> Hyderabad, Telangana</option>
+                    <option value="Nizamabad,Telangana"> Nizamabad, Telangana</option>
+                    <option value="Warangal,Telangana"> Warangal, Telangana</option>
+                    <option value="Karimnagar,Telangana"> Karimnagar, Telangana</option>
+                    <option value="Agartala,Tripura"> Agartala, Tripura</option>
+                    <option value="Agra,Uttar Pradesh"> Agra, Uttar Pradesh</option>
+                    <option value="Faizabad,Uttar Pradesh"> Faizabad, Uttar Pradesh</option>
+                    <option value="Jhansi,Uttar Pradesh"> Jhansi, Uttar Pradesh</option>
+                    <option value="Lucknow,Uttar Pradesh"> Lucknow, Uttar Pradesh</option>
+                    <option value="Varanasi,Uttar Pradesh"> Varanasi, Uttar Pradesh</option>
+                    <option value="Ghaziabad,Uttar Pradesh"> Ghaziabad, Uttar Pradesh</option>
+                    <option value="Shahjahanpur,Uttar Pradesh"> Shahjahanpur, Uttar Pradesh</option>
+                    <option value="Dehra Dun, Uttarakhand"> Dehra Dun, Uttarakhand</option>
+                    <option value="Haridwar, Uttarakhand"> Haridwar, Uttarakhand</option>
+                    <option value="Nainital, Uttarakhand"> Nainital, Uttarakhand</option>
+                    <option value="Asansol, West Bengal"> Asansol, West Bengal</option>
+                    <option value="Darjeeling, West Bengal"> Darjeeling, West Bengal</option>
+                    <option value="Dum Dum, West Bengal"> Dum Dum, West Bengal</option>
+                    <option value="Kolkata, West Bengal"> Kolkata, West Bengal</option>
+                    <option value="Siliguri, West Bengal"> Siliguri, West Bengal</option>
+                    <option value="Titagarh, West Bengal"> Hyderabad, Telangana</option>
+                </datalist>
+                <p style="left: 70px;">Date</p>
+                <label for="date"></label>
+                <input type="date" placeholder="From Date" id="currentDate" /required>
+                <a href="pages/Search_bus.html"><button class="subscribe-btn">Search</button></a>
+            </div>
+    </form>
+    </div>
     </header>
 
     <section class="offers-container swiper">
@@ -135,146 +482,79 @@
                 <div class="card swiper-slide">
                     <div class="image-content">
                         <div class="card-image">
-                            <img src="images/Offer_1.png" alt="" class="card-img">
+                            <img src="https://static.abhibus.com/busgallery/offerbanners/Oct2021/31/1635683694-325X135.png"
+                                alt="" class="card-img">
                         </div>
                     </div>
 
                     <div class="offers-card-content">
                         <h2>Get ₹300 Instant Discount On Your First Booking</h2>
-                    </div>
-
-                    <div class="book-now">
-                        <a href="" class="card-book-now">Book now</a>
-                        <i class='fa fa-caret-right' style='color: black'></i>
                     </div>
                 </div>
                 <div class="card swiper-slide">
                     <div class="image-content">
                         <div class="card-image">
-                            <img src="images/Offer_1.png" alt="" class="card-img">
+                            <img src="https://static.abhibus.com/busgallery/offerbanners/Jul2022/01/1656657944-325-135.webp"
+                                alt="" class="card-img">
                         </div>
                     </div>
 
                     <div class="offers-card-content">
-                        <h2>Get ₹300 Instant Discount On Your First Booking</h2>
+                        <h2>Upto Rs.150 Instant Discount on MobiKwik</h2>
                     </div>
 
-                    <div class="book-now">
-                        <a href="" class="card-book-now">Book now</a>
-                        <i class='fa fa-caret-right' style='color: black'></i>
-                    </div>
                 </div>
                 <div class="card swiper-slide">
                     <div class="image-content">
                         <div class="card-image">
-                            <img src="images/Offer_1.png" alt="" class="card-img">
+                            <img src="https://static.abhibus.com/busgallery/offerbanners/Jul2022/01/1656658974-325x135.webp"
+                                alt="" class="card-img">
                         </div>
                     </div>
 
                     <div class="offers-card-content">
-                        <h2>Get ₹300 Instant Discount On Your First Booking</h2>
+                        <h2>Save upto Rs.300 with Simpl</h2>
                     </div>
 
-                    <div class="book-now">
-                        <a href="" class="card-book-now">Book now</a>
-                        <i class='fa fa-caret-right' style='color: black'></i>
-                    </div>
                 </div>
                 <div class="card swiper-slide">
                     <div class="image-content">
                         <div class="card-image">
-                            <img src="images/Offer_1.png" alt="" class="card-img">
+                            <img src="https://images.railyatri.in/ry_images_prod/Banner-2-1658901192.jpg" alt=""
+                                class="card-img">
                         </div>
                     </div>
 
                     <div class="offers-card-content">
-                        <h2>Get ₹300 Instant Discount On Your First Booking</h2>
+                        <h2>Special offer at checkout for our Telangana family!</h2>
                     </div>
 
-                    <div class="book-now">
-                        <a href="" class="card-book-now">Book now</a>
-                        <i class='fa fa-caret-right' style='color: black'></i>
-                    </div>
                 </div>
                 <div class="card swiper-slide">
                     <div class="image-content">
                         <div class="card-image">
-                            <img src="images/Offer_1.png" alt="" class="card-img">
+                            <img src="https://images.railyatri.in/ry_images_prod/HDFCBanner-1657809747.jpg" alt=""
+                                class="card-img">
                         </div>
                     </div>
 
                     <div class="offers-card-content">
-                        <h2>Get ₹300 Instant Discount On Your First Booking</h2>
+                        <h2>BlueBus Special Offer Use Coupon Code: SB20HDFC</h2>
                     </div>
 
-                    <div class="book-now">
-                        <a href="" class="card-book-now">Book now</a>
-                        <i class='fa fa-caret-right' style='color: black'></i>
-                    </div>
                 </div>
                 <div class="card swiper-slide">
                     <div class="image-content">
                         <div class="card-image">
-                            <img src="images/Offer_1.png" alt="" class="card-img">
+                            <img src="https://static.abhibus.com/busgallery/offerbanners/May2022/18/1652881323-325X135.webp"
+                                alt="" class="card-img">
                         </div>
                     </div>
 
                     <div class="offers-card-content">
-                        <h2>Get ₹300 Instant Discount On Your First Booking</h2>
+                        <h2>Save Upto Rs.500 on HRTC Bookings</h2>
                     </div>
 
-                    <div class="book-now">
-                        <a href="" class="card-book-now">Book now</a>
-                        <i class='fa fa-caret-right' style='color: black'></i>
-                    </div>
-                </div>
-                <div class="card swiper-slide">
-                    <div class="image-content">
-                        <div class="card-image">
-                            <img src="images/Offer_1.png" alt="" class="card-img">
-                        </div>
-                    </div>
-
-                    <div class="offers-card-content">
-                        <h2>Get ₹300 Instant Discount On Your First Booking</h2>
-                    </div>
-
-                    <div class="book-now">
-                        <a href="" class="card-book-now">Book now</a>
-                        <i class='fa fa-caret-right' style='color: black'></i>
-                    </div>
-                </div>
-                <div class="card swiper-slide">
-                    <div class="image-content">
-                        <div class="card-image">
-                            <img src="images/Offer_1.png" alt="" class="card-img">
-                        </div>
-                    </div>
-
-                    <div class="offers-card-content">
-                        <h2>Get ₹300 Instant Discount On Your First Booking</h2>
-                    </div>
-
-                    <div class="book-now">
-                        <a href="" class="card-book-now">Book now</a>
-                        <i class='fa fa-caret-right' style='color: black'></i>
-                    </div>
-                </div>
-                <div class="card swiper-slide">
-                    <div class="image-content">
-                        <div class="card-image">
-                            <img src="images/Offer_1.png" alt="" class="card-img">
-                        </div>
-                    </div>
-
-                    <div class="offers-card-content">
-                        <h2>Get ₹300 Instant Discount On Your First Booking</h2>
-                    </div>
-
-                    <div class="book-now">
-                        <a href="" class="card-book-now">Book now</a>
-                        <i class='fa fa-caret-right' style='color: black'></i>
-                    </div>
                 </div>
             </div>
         </div>
@@ -282,6 +562,8 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
     </section>
+
+
     <section id="About-us">
         <div class="about-content">
             <div class="about-image">
@@ -291,11 +573,12 @@
             <div class="about-text">
                 <h2>About BlueBus</h2>
                 <h1>BlueBus - India's fastest growing ticket booking platform</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat nostrum sunt labore nihil. Placeat,
-                    aliquam ad? Ducimus perspiciatis explicabo consectetur officiis cum? Molestias neque ullam impedit
-                    hic
-                    quaerat doloremque rem!</p>
-                <a href=""><button>More About Us</button></a>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde maxime consectetur ad dolorem
+                    doloribus tempore aut reiciendis quam, aspernatur veritatis earum nobis laudantium porro minima quos
+                    corrupti, fugiat perspiciatis consequuntur velit alias pariatur ipsum quaerat. Quas, tempora nostrum
+                    consequatur architecto laboriosam cupiditate quis exercitationem voluptates sit ducimus eum
+                    voluptatibus fuga,</p>
+                <a href="pages/About.html"><button>More About Us</button></a>
             </div>
         </div>
     </section>
@@ -354,33 +637,60 @@
         </div>
     </section> -->
 
-    <section id="services-section">
-        <div class="services-heading">
-            <h1>OUR BEST SERVICES</h1>
-            <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit
-                ultrices.</p>
-        </div>
+    <section id="services-container">
+        <h1>OUR BEST SERVICES</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="main">
+                        <div class="service">
+                            <div class="service-logo">
+                                <img src="images/1077976.png" alt="">
+                            </div>
+                            <h4>LOWEST PRICES</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam a quo ex similique
+                                nesciunt iusto consectetur ab officiis velit sapiente, incidunt in laborum, delectus
+                                quibusdam officia voluptatem accusantium praesentium quia?
+                            </p>
+                        </div>
+                        <div class="shadowOne"></div>
+                        <div class="shadowTwo"></div>
+                    </div>
+                </div>
 
-        <div id="services-content">
-            <div class="services-box">
-                <img src="images/1077976.png" alt="">
-                <h2>LOWEST PRICES</h2>
-                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a class="services-btn" href="">Read More</a>
-            </div>
-            <div class="services-box">
-                <img src="images/6151135.png" alt="">
-                <h2>ULTIMATE COMFORT</h2>
-                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a class="services-btn" href="" style="color: white; background-color: #387cbd;">Read More</a>
-            </div>
-            <div class="services-box">
-                <img src="images/2038772.png" alt="">
-                <h2>FREE CANCELLATION & REFUNDS</h2>
-                <p class="center-services" style="margin: -20px 0 0 15px;">Sample text. Lorem ipsum dolor sit amet,
-                    consectetur
-                    adipiscing elit.</p>
-                <a class="services-btn" href="">Read More</a>
+                <div class="col-md-4">
+                    <div class="main">
+                        <div class="service">
+                            <div class="service-logo">
+                                <img src="images/6151135.png" alt="">
+                            </div>
+                            <h4>ULTIMATE COMFORT</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam a quo ex similique
+                                nesciunt iusto consectetur ab officiis velit sapiente, incidunt in laborum, delectus
+                                quibusdam officia voluptatem accusantium praesentium quia?
+                            </p>
+                        </div>
+                        <div class="shadowOne"></div>
+                        <div class="shadowTwo"></div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="main">
+                        <div class="service">
+                            <div class="service-logo">
+                                <img src="images/2038772.png" alt="">
+                            </div>
+                            <h4>FREE CANCELLATION & REFUNDS</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam a quo ex similique
+                                nesciunt iusto consectetur ab officiis velit sapiente, incidunt in laborum, delectus
+                                quibusdam officia voluptatem accusantium praesentium quia?
+                            </p>
+                        </div>
+                        <div class="shadowOne"></div>
+                        <div class="shadowTwo"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -388,158 +698,178 @@
     <section id="achievement-block">
         <div class="achievement-text">
             <h1>THE NUMBERS ARE GROWING</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur natus, facere asperiores neque
-                ipsum obcaecati expedita laborum nostrum quis. Debitis.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas cum minus consequatur neque maxime saepe
+                corporis ipsum laboriosam at harum?
+            </p>
         </div>
-        <div class="achievement-content">
-            <div class="achievement-box">
-                <div id="dot">
-                    <img src="images/308.png" alt="">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="achievement-box">
+                        <div class="achievement-image">
+                            <img src="images/308.png" alt="">
+                        </div>
+                        <h3>1000+</h3>
+                        <h4>BUSES</h4>
+                        <p> Total No. of Buses
+                            Currently Being Tracked</p>
+                    </div>
                 </div>
-                <h3>1000+</h3>
-                <h4>BUSES</h4>
-                <p> Total No. of Buses
-                    Currently Being Tracked</p>
-            </div>
-            <div class="achievement-box">
-                <div id="dot">
-                    <img src="images/681494.png" alt="">
+                <div class="col-md-4">
+                    <div class="achievement-box">
+                        <div class="achievement-image">
+                            <img src="images/681494.png" alt="">
+                        </div>
+                        <h3> 10 M</h3>
+                        <h4>CUSTOMERS</h4>
+                        <p> BlueBus is trusted by over
+                            10 million happy customers
+                            globally</p>
+                    </div>
                 </div>
-                <h3> 10 M</h3>
-                <h4>CUSTOMERS</h4>
-                <p> BlueBus is trusted by over
-                    10 million happy customers
-                    globally</p>
-            </div>
-            <div class="achievement-box">
-                <div id="dot">
-                    <img src="images/175613.png" alt="">
+                <div class="col-md-4">
+                    <div class="achievement-box">
+                        <div class="achievement-image">
+                            <img src="images/175613.png" alt="">
+                        </div>
+                        <h3> 120 M</h3>
+                        <h4> BUS TICKETS</h4>
+                        <p> Over 120 million trips
+                            booked using BlueBus</p>
+                    </div>
                 </div>
-                <h3> 120 M</h3>
-                <h4> BUS TICKETS</h4>
-                <p> Over 120 million trips
-                    booked using BlueBus</p>
             </div>
         </div>
     </section>
 
     <section id="footer-section">
-        <div class="footer-icon">
-            <div class="footer-box">
-                <span class="dot-contact">
-                    <i class='fa fa-phone' style="color: white;"></i>
-                </span>
-                <div class="footer-icon-text">
-                    <p>(+00) 1234 5678</p>
+        <div class="container container-footer">
+            <div class="row footer-margin">
+                <div class="col-md-4 footer-box">
+                    <span class="dot-contact">
+                        <div class="footer-icon">
+                            <i class='fa fa-phone' style="color: white;"></i>
+                        </div>
+                        <div class="footer-icon-text">
+                            <p>+91-98217-92154</p>
+                        </div>
+                    </span>
+                </div>
+                <div class="col-md-4 footer-box" style="background: #1c1c1c;">
+                    <span class="dot-contact">
+                        <div class="footer-icon">
+                            <i class='fa fa-envelope' style='color: white'></i>
+                        </div>
+                        <div class="footer-icon-text">
+                            <p>care@BlueBus.com</p>
+                        </div>
+                    </span>
+                </div>
+                <div class="col-md-4 footer-box" style="background: #252525;">
+                    <span class="dot-location">
+                        <div class="footer-icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="footer-icon-text">
+                            <p>A-604 Emperia Garden Rasayani, Panvel, Maharashtra, India</p>
+                        </div>
+                    </span>
                 </div>
             </div>
-            <div class="footer-box" style="background: #1c1c1c;">
-                <span class="dot-contact">
-                    <i class='fa fa-envelope' style='color: white'></i>
-                </span>
-                <div class="footer-icon-text">
-                    <p>info@email.com</p>
-                </div>
-            </div>
-            <div class="footer-box" style="background: #252525;">
-                <span class="dot-location">
-                    <i class="fa fa-map-marker"></i>
-                </span>
-                <div class="footer-icon-text">
-                    <p>203 Fake St. Mountain View, San Francisco, California, USA</p>
-                </div>
-            </div>
-        </div>
 
-        <div id="footer-row">
-            <div class="footer-column-input">
-                <div class="footer-info">
-                    <div class="footer-row">
-                        <h2>About</h2>
-                        <ul class="about-list">
-                            <li>
-                                <a href="">Home</a>
-                            </li>
-                            <li>
-                                <a href="">About Us</a>
-                            </li>
-                            <li>
-                                <a href="">Services</a>
-                            </li>
-                            <li>
-                                <a href="">Career</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-row">
-                        <h2>Resouces</h2>
-                        <ul class="Resources-list">
-                            <li>
-                                <a href="">Offers</a>
-                            </li>
-                            <li>
-                                <a href="">Cancel & Refunds</a>
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h2>About</h2>
+                            <ul class="about-list">
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="pages/About.html">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="pages/Career.html">Career</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h2>Resouces</h2>
+                            <ul class="Resources-list">
+                                <li>
+                                    <a href="pages/Offers.html">Offers</a>
+                                </li>
+                                <li>
+                                    <a href="pages/Cancel_booking.html">Cancel & Refunds</a>
 
-                            </li>
-                            <li>
-                                <a href="">Privacy Policy</a>
-                            </li>
-                            <li>
-                                <a href="">Terms</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-row">
-                        <h2>Company</h2>
-                        <ul class="Resources-list">
-                            <li>
-                                <a href="">Contact Us</a>
-
-                            </li>
-                            <li>
-                                <a href="">FAQ's</a>
-                            </li>
-                            <li>
-                                <a href="">FAQ's</a>
-                            </li>
-                            <li>
-                                <a href="">FAQ's</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-subscribe">
-                        <h2 class="footer-heading">Subscribe</h2>
-                        <form class="subscribe-form">
-                            <div class="subscribe-contact">
-                                <input type="text" class="subscribe-input" placeholder="Enter email address">
-                                <button type="submit" class="form-control submit rounded-right">Subscribe</button>
-                            </div>
-                            <p>Get Marketing updates in your mailbox</p>
-                        </form>
+                                </li>
+                                <li>
+                                    <a href="pages/Privacy.html">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="pages/Terms.html">Terms</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h2>Company</h2>
+                            <ul class="Resources-list">
+                                <li>
+                                    <a href="pages/Gallery.html">Gallery</a>
+                                </li>
+                                <li>
+                                    <a href="pages/contact.html">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="pages/FAQ's.html">FAQ's</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+
+                <div class="col-md-5">
+                    <h2 class="footer-heading">Subscribe</h2>
+                    <form class="subscribe-form">
+                        <div class="subscribe-contact">
+                            <input type="text" class="subscribe-input" placeholder="Enter email address">
+                            <button type="submit" class="form-control submit rounded-right">Subscribe</button>
+                        </div>
+                        <p>Get Marketing updates in your mailbox</p>
+                    </form>
+                </div>
+
             </div>
         </div>
     </section>
 
     <div id="footer-social-contacts">
-        <div class="footer-container">
-            <div class="footer-copyright-text">
-                <p>Copyright © 2019, All Right Reserved Seobin</p>
-            </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="footer-copyright-text">
+                        <p>Copyright © 2022, All Right Reserved BlueBus.com </p>
+                        <span>Website Design And Developed By Devesh Ukalkar.</span>
+                    </div>
+                </div>
 
-            <div class="social-icon">
-                <a href=""><span class="dot-social"><i class='fa fa-facebook'
-                            style='color: white; margin: 10px 14px'></i></span></a>
-                <a href=""><span class="dot-social"><i class='fa fa-instagram' style='color: white'></i></span></a>
-                <a href=""><span class="dot-social"><i class='fa fa-twitter' style='color: white'></i></span></a>
+                <div class="col-md-5" style="text-align: right;">
+                    <a href=""><span class="dot-social"><i class='fa fa-facebook'
+                                style='color: white; margin: 10px 14px'></i></span></a>
+                    <a href=""><span class="dot-social"><i class='fa fa-instagram' style='color: white'></i></span></a>
+                    <a href=""><span class="dot-social"><i class='fa fa-twitter' style='color: white'></i></span></a>
+                </div>
             </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <div class="scrolltop">
+        <img src="images/icon.png" alt="Go-to-top" id="myBtn" onclick="topFunction()">
+    </div>
+
     <script src="javascript/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".slide-content", {
             slidesPerView: 3,
@@ -574,6 +904,22 @@
                 }
             },
         });
+
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function () { scrollFunction(), navfunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
     </script>
 </body>
 

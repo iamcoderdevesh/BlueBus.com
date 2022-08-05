@@ -1,32 +1,29 @@
-const navToggler = document.querySelector('.nav-toggler');
-const navMenu = document.querySelector('.site-navbar ul');
-const navLinks = document.querySelectorAll('.site-navbar a');
+// Navigation Bar 
+/*===== EXPANDER MENU  =====*/
+const showMenu = (toggleId, navId) => {
+  const toggle = document.getElementById(toggleId),
+    nav = document.getElementById(navId)
 
-// load all event listners
-allEventListners();
-
-// functions of all event listners
-function allEventListners() {
-  // toggler icon click event
-  navToggler.addEventListener('click', togglerClick);
-  // nav links click event
-  navLinks.forEach(elem => elem.addEventListener('click', navLinkClick));
-}
-
-// togglerClick function
-function togglerClick() {
-  navToggler.classList.toggle('toggler-open');
-  navMenu.classList.toggle('open');
-}
-
-// navLinkClick function
-function navLinkClick() {
-  if (navMenu.classList.contains('open')) {
-    navToggler.click();
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('show')
+      toggle.classList.toggle('bx-x')
+    })
   }
 }
+showMenu('header-toggle', 'nav-menu')
 
-// getting current for search box
+/*===== ACTIVE AND REMOVE MENU =====*/
+const navLink = document.querySelectorAll('.nav__link');
+
+function linkAction() {
+  /*Active link*/
+  navLink.forEach(n => n.classList.remove('active'));
+  this.classList.add('active');
+}
+navLink.forEach(n => n.addEventListener('click', linkAction));
+
+// getting current Date for search box
 var date = new Date();
 var currentDate = date.toISOString().slice(0, 10);
 var currentTime = date.getHours() + ':' + date.getMinutes();
@@ -68,3 +65,19 @@ var swiper = new Swiper(".slide-content", {
     }
   },
 });
+
+//Go to top function
+var mybutton = document.getElementById("myBtn");
+window.onscroll = function () { scrollFunction(), navfunction() };
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
