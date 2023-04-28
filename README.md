@@ -23,3 +23,8 @@ This project presents a static website for bus ticket booking. The website provi
 
 ## 🔗 Demo
 [![Visit Website](https://img.shields.io/badge/-%20Visit%20Site-blue?style=for-the-badge)](https://iamcoderdevesh.github.io/BlueBus.com)
+
+## 🚀 About Me
+- 👋 Hi, I’m Devesh Ukalkar
+- 💬 Feel Free to Ask me any Question about this project.
+- 📫 How to reach me deveshukalkar007@gmail.com
