@@ -40,9 +40,9 @@
             <div class="nav__content bd-grid">
                 <a href="" class="nav__perfil">
                     <div class="nav__img">
-                        <img src="images/logo.png" alt="">
+                        <!-- <img src="background/logo.png" alt=""> -->
+                        <p>BlueBus</p>
                     </div>
-
                 </a>
 
                 <div class="nav__menu">
@@ -81,12 +81,12 @@
                 </div>
                 <div class="nav__perfil">
                     <div class="login-tab">
-                        <div class="login-tab-wrapper">
+                        <button onclick="openlogin()" class="login-tab-wrapper">
                             <span class="hover-effect-login"></span>
                             <i class='bx bxs-user-circle'></i>
-                            <a href="pages/Login.html" class="nav__link" id="login-btn">Login / Sign-up</a>
+                            <a href="#" class="nav__link" id="login-btn">Login / Sign-up</a>
                             <i class='bx bx-chevron-down'></i>
-                        </div>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -101,8 +101,10 @@
                 dolore magna aliqua. Ut enim ad minim veniam,<br> quis nostrud exercitation ullamco laboris
             </p>
             <div class="home-btn">
-                <button type="button"><span class="hover-effect"></span>Learn More</button>
-                <button type="button"><span class="hover-effect"></span>Book Now</button>
+                <a href="pages/About.html"><button type="button"><span class="hover-effect"></span>Learn
+                        More</button></a>
+                <a href="pages/Search_bus.html"><button type="button"><span class="hover-effect"></span>Book
+                        Now</button></a>
             </div>
         </div>
     </section>
@@ -113,7 +115,7 @@
             <div class="form-input">
                 <p>From City</p>
                 <label for="Text"></label>
-                <input type="Text" list="from_city" placeholder="From" /required>
+                <input type="Text" list="from_city" placeholder="From">
                 <datalist id="from_city">
                     <option value="Amaravati, Andhra Pradesh">Amaravati, Andhra Pradesh</option>
                     <option value="Adoni, Andhra Pradesh">Adoni, Andhra Pradesh</option>
@@ -289,7 +291,7 @@
                 </datalist>
                 <p style="left: 78px;">To City</p>
                 <label for="Text"></label>
-                <input type="text" list="to_city" placeholder="To" /required>
+                <input type="text" list="to_city" placeholder="To">
                 <datalist id="to_city">
                     <option value="Amaravati, Andhra Pradesh">Amaravati, Andhra Pradesh</option>
                     <option value="Adoni, Andhra Pradesh">Adoni, Andhra Pradesh</option>
@@ -465,8 +467,9 @@
                 </datalist>
                 <p style="left: 70px;">Date</p>
                 <label for="date"></label>
-                <input type="date" placeholder="From Date" id="currentDate" /required>
-                <a href="pages/Search_bus.html"><button class="subscribe-btn">Search</button></a>
+                <input type="date" placeholder="From Date" id="currentDate">
+                <a href="pages/Search_bus.html" class="subscribe-btn-a"><button
+                        class="subscribe-btn">Search</button></a>
             </div>
     </form>
     </div>
@@ -864,16 +867,17 @@
         </div>
     </div>
 
-    <div class="scrolltop">
-        <img src="images/icon.png" alt="Go-to-top" id="myBtn" onclick="topFunction()">
-    </div>
+    <button id="topBtn" onclick="topFunction()">
+        <i class='fa fa-arrow-up' alt="Go-to-top"></i>
+    </button>
 
     <script src="javascript/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         var swiper = new Swiper(".slide-content", {
-            slidesPerView: 3,
-            spaceBetween: 25,
+            slidesPerView: 4,
+            spaceBetween: 14,
             loop: true,
             centerSlide: 'true',
             fade: 'true',
@@ -905,21 +909,20 @@
             },
         });
 
-        var mybutton = document.getElementById("myBtn");
-        window.onscroll = function () { scrollFunction(), navfunction() };
+        $(document).ready(function () {
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 40) {
+                    $('#topBtn').fadeIn();
+                } else {
+                    $('#topBtn').fadeOut();
+                }
+            });
 
+            $("#topBtn").click(function () {
+                $('html ,body').animate({ scrollTop: 0 }, 800);
+            });
+        });
     </script>
 </body>
 

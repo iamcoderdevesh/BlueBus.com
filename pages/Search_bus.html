@@ -12,7 +12,7 @@
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <title>About-Us</title>
+    <title>Search Bus</title>
     <link rel="stylesheet" href="../css/styles.css">
     <style>
         body {
@@ -31,11 +31,7 @@
             <div class="nav__content bd-grid">
                 <a href="" class="nav__perfil">
                     <div class="nav__img">
-                        <img src="../images/logo.png" alt="">
-                    </div>
-
-                    <div>
-                        <span class="nav__name">LOGO</span>
+                        <p>BlueBus</p>
                     </div>
                 </a>
 
@@ -386,7 +382,368 @@
                                 <div class="col-sm-2 bus-seats">
                                     <p>7 window seats</p>
                                     <p>Total 27 seats left</p>
-                                    <a href=""><button>Select Seat</button></a>
+                                    <a href="javascript:changeClass();"><button id="bus-seat-btn">Select Seat</button></a>
+                                </div>
+                            </div>
+
+                            <div class="select-seat" id="seat-select">
+                                <div class="container">
+                                    <div class="row justify-content-between">
+                                        <div class="col-7">
+                                            <div class="col">
+                                                <div class="bus-info">
+                                                    <p>Mumbai</p>
+                                                    <i class='fa-solid fa-arrow-right-long'></i>
+                                                    <p>Hyderabad</p>
+                                                </div>
+
+                                                <div class="col-sm-4">
+                                                    <div class="seats-available">
+                                                        <p>29 Seats Available</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="seat-price">
+                                                    <h5>Seat Price</h5>
+                                                    <ul class="price-data">
+                                                        <li class="price selected-price">All</li>
+                                                        <li class="price">800</li>
+                                                        <li class="price">1000</li>
+                                                        <li class="price">1200</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+
+                                        <div class="seat-map">
+                                            <ul>
+                                                <li class="seat-map-li available"></li>
+                                                <li>Available</li>
+                                                <li class="seat-map-li selected"></li>
+                                                <li>Selected</p>
+                                                <li class="seat-map-li unavailable"></li>
+                                                <li>Unavailable</li>
+                                                <li class="seat-map-li ladies-booked"></li>
+                                                <li>Booked By Ladies</li>
+                                                <li class="seat-map-li for-ladies"></li>
+                                                <li>For Ladies</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="seat-layout">
+                                                <div class="col">
+                                                    <div class="upper-seat">
+                                                        <div class="row">
+                                                            <div class="col-sm-2">
+                                                                <img src="../images/wheel.png" alt=""
+                                                                    class="seat-image">
+                                                            </div>
+                                                        </div>
+                                                        <div class="seat-line"></div>
+
+                                                        <div class="row seat-align">
+                                                            <div class="col-md-11">
+                                                                <ul class="seat-ul">
+                                                                    <li class="seat occupied">
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat" id="ticket" for="B3#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">B3 |
+                                                                            ₹800</span>
+                                                                        <span id="ticketPrice">800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat occupied">
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat" id="ticket" for="B7#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">B7 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat" id="ticket" for="B9#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">B9 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat" id="ticket" for="B11#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">B11 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                            <div class="col-md-11">
+                                                                <ul class="seat-ul">
+                                                                    <li class="seat" id="ticket" for="B2#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">B2 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat" id="ticket" for="B4#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">B4 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat occupied">
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat" id="ticket" for="B8#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">B8 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat" id="ticket" for="B10#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">B10 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat" id="ticket" for="B12#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">B12 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                            <div class="col-md-11">
+                                                                <ul class="seat-ul seat-ul-lower">
+                                                                    <li class="seat" id="ticket" for="B15#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">B15 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat" id="ticket" for="B16#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">B16 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat" id="ticket" for="B17#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">B17 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat" id="ticket" for="B18#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">B18 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat occupied">
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat occupied">
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-sm">
+                                                            <ul class="seat-ul seat-ul-side">
+                                                                <li class="seat seat-side occupied">
+                                                                    <div class="seat-design-side"></div>
+                                                                </li>
+                                                                <li class="seat seat-side" id="ticket" for="B14#800"
+                                                                    onclick="myfunc(this)">
+                                                                    <span class="popuptext" id="myPopup">B14 |
+                                                                        ₹800</span>
+                                                                    <div class="seat-design-side"></div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="lower-seat">
+                                                        <div class="row">
+                                                            <div class="col-sm-2 lower-deck">
+                                                                <!-- <img src="../images/wheel.png" alt="" class="seat-image"> -->
+                                                            </div>
+                                                        </div>
+                                                        <div class="seat-line"></div>
+
+                                                        <div class="row seat-align">
+                                                            <div class="col-md-11">
+                                                                <ul class="seat-ul">
+                                                                    <li class="seat" id="ticket" for="L1#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">L1 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat occupied">
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat occupied">
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat" id="ticket" for="L7#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">L7 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat" id="ticket" for="L9#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">L9 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat occupied">
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-md-11">
+                                                                <ul class="seat-ul">
+                                                                    <li class="seat" id="ticket" for="L2#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">L2 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat" id="ticket" for="L4#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">L4 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat occupied">
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat" id="ticket" for="L8#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">L8 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat" id="ticket" for="L10#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">L10 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat" id="ticket" for="L12#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">L12 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-md-11">
+                                                                <ul class="seat-ul seat-ul-lower">
+                                                                    <li class="seat occupied">
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat" id="ticket" for="L16#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">L16 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat" id="ticket" for="L17#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">L17 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat occupied">
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat" id="ticket" for="L19#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">L19 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                    <li class="seat" id="ticket" for="L20#800"
+                                                                        onclick="myfunc(this)">
+                                                                        <span class="popuptext" id="myPopup">L20 |
+                                                                            ₹800</span>
+                                                                        <div class="seat-design"></div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-sm">
+                                                            <ul class="seat-ul seat-ul-side">
+                                                                <li class="seat seat-side">
+                                                                    <span class="popuptext" id="myPopup">L13 |
+                                                                        ₹800</span>
+                                                                    <div class="seat-design-side"></div>
+                                                                </li>
+                                                                <li class="seat seat-side">
+                                                                    <span class="popuptext" id="myPopup">L14 |
+                                                                        ₹800</span>
+                                                                    <div class="seat-design-side"></div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4 ms-auto">
+                                            <div class="bus-details">
+                                                <h3>Orange Tours and Travels</h3>
+                                                <p>AC Seater-Sleeper (2 + 1)</p>
+                                                <p>Date: <span>Tue, 30 Aug, 2022</span> Time: <span>11:45 AM - 04:00
+                                                        AM</span></p>
+                                            </div>
+
+                                            <div class="points">
+                                                <form action="#">
+                                                    <label for="Boarding">Select Boarding Point:</label>
+                                                    <select name="Boarding" class="boarding-point" id="boarding"
+                                                        onchange="btnFunction()">
+                                                        <option value="Select Boarding Point">Select Boarding Point
+                                                        </option>
+                                                        <option value="volvo">Volvo</option>
+                                                        <option value="saab">Saab</option>
+                                                        <option value="mercedes">Mercedes</option>
+                                                        <option value="audi">Audi</option>
+                                                    </select>
+
+                                                    <label for="Dropping">Select Dropping Point:</label>
+                                                    <select name="Dropping" class="dropping-point" id="dropping"
+                                                        onchange="btnFunction()">
+                                                        <option value="Select Dropping Point">Select Dropping Point
+                                                        </option>
+                                                        <option value="volvo">Volvo</option>
+                                                        <option value="saab">Saab</option>
+                                                        <option value="mercedes">Mercedes</option>
+                                                        <option value="audi">Audi</option>
+                                                    </select>
+                                                    <div class="seat-amount">
+                                                        <p>Seat No: <span id="seatno"></span></p>
+                                                        <p>Total Fare: <span id="total">₹800</span></p>
+                                                    </div>
+                                                    <input type="submit" class="submit-btn" value="Submit" disabled
+                                                        onclick="checkseat()">
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -425,7 +782,7 @@
                                 <div class="col-sm-2 bus-seats">
                                     <p>7 window seats</p>
                                     <p>Total 27 seats left</p>
-                                    <a href=""><button>Select Seat</button></a>
+                                    <a href="Login.html"><button>Select Seat</button></a>
                                 </div>
                             </div>
 
@@ -464,7 +821,7 @@
                                 <div class="col-sm-2 bus-seats">
                                     <p>7 window seats</p>
                                     <p>Total 27 seats left</p>
-                                    <a href=""><button>Select Seat</button></a>
+                                    <a href="Login.html"><button>Select Seat</button></a>
                                 </div>
                             </div>
 
@@ -503,7 +860,7 @@
                                 <div class="col-sm-2 bus-seats">
                                     <p>7 window seats</p>
                                     <p>Total 27 seats left</p>
-                                    <a href=""><button>Select Seat</button></a>
+                                    <a href="Login.html"><button>Select Seat</button></a>
                                 </div>
                             </div>
 
@@ -542,7 +899,7 @@
                                 <div class="col-sm-2 bus-seats">
                                     <p>7 window seats</p>
                                     <p>Total 27 seats left</p>
-                                    <a href=""><button>Select Seat</button></a>
+                                    <a href="Login.html"><button>Select Seat</button></a>
                                 </div>
                             </div>
 
@@ -581,7 +938,202 @@
                                 <div class="col-sm-2 bus-seats">
                                     <p>7 window seats</p>
                                     <p>Total 27 seats left</p>
-                                    <a href=""><button>Select Seat</button></a>
+                                    <a href="Login.html"><button>Select Seat</button></a>
+                                </div>
+                            </div>
+
+                            <div class="row search-result">
+                                <div class="col-sm-4 bus-info-col">
+                                    <div class="search-bus-info">
+                                        <h2>Orange Tours And Travels</h2>
+                                        <p class="search-text-p">A/C Sleeper (2+1)</p>
+                                        <span class="bus-rating">
+                                            <span>4.4/5</span>
+                                        </span>
+                                        <span class="seprater"></span>
+                                        <span class="search-text-p">286 Ratings</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-1 dep-time">
+                                    <h2>12:05</h2>
+                                    <p class="search-text-p">Malad East</p>
+                                </div>
+
+                                <div class="col-sm-1 total-time">
+                                    <p class="total-time-text">15h 15m</p>
+                                    <span class="time-border-bottom"></span>
+                                </div>
+
+                                <div class="col-sm-2 dep-time">
+                                    <h2>11:05</h2>
+                                    <p class="search-text-p">Malad East</p>
+                                </div>
+
+                                <div class="col-sm-2 bus-price">
+                                    <h2>₹1000</h2>
+                                </div>
+
+                                <div class="col-sm-2 bus-seats">
+                                    <p>7 window seats</p>
+                                    <p>Total 27 seats left</p>
+                                    <a href="Login.html"><button>Select Seat</button></a>
+                                </div>
+                            </div>
+
+                            <div class="row search-result">
+                                <div class="col-sm-4 bus-info-col">
+                                    <div class="search-bus-info">
+                                        <h2>Orange Tours And Travels</h2>
+                                        <p class="search-text-p">A/C Sleeper (2+1)</p>
+                                        <span class="bus-rating">
+                                            <span>4.4/5</span>
+                                        </span>
+                                        <span class="seprater"></span>
+                                        <span class="search-text-p">286 Ratings</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-1 dep-time">
+                                    <h2>12:05</h2>
+                                    <p class="search-text-p">Malad East</p>
+                                </div>
+
+                                <div class="col-sm-1 total-time">
+                                    <p class="total-time-text">15h 15m</p>
+                                    <span class="time-border-bottom"></span>
+                                </div>
+
+                                <div class="col-sm-2 dep-time">
+                                    <h2>11:05</h2>
+                                    <p class="search-text-p">Malad East</p>
+                                </div>
+
+                                <div class="col-sm-2 bus-price">
+                                    <h2>₹1000</h2>
+                                </div>
+
+                                <div class="col-sm-2 bus-seats">
+                                    <p>7 window seats</p>
+                                    <p>Total 27 seats left</p>
+                                    <a href="Login.html"><button>Select Seat</button></a>
+                                </div>
+                            </div>
+
+                            <div class="row search-result">
+                                <div class="col-sm-4 bus-info-col">
+                                    <div class="search-bus-info">
+                                        <h2>Orange Tours And Travels</h2>
+                                        <p class="search-text-p">A/C Sleeper (2+1)</p>
+                                        <span class="bus-rating">
+                                            <span>4.4/5</span>
+                                        </span>
+                                        <span class="seprater"></span>
+                                        <span class="search-text-p">286 Ratings</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-1 dep-time">
+                                    <h2>12:05</h2>
+                                    <p class="search-text-p">Malad East</p>
+                                </div>
+
+                                <div class="col-sm-1 total-time">
+                                    <p class="total-time-text">15h 15m</p>
+                                    <span class="time-border-bottom"></span>
+                                </div>
+
+                                <div class="col-sm-2 dep-time">
+                                    <h2>11:05</h2>
+                                    <p class="search-text-p">Malad East</p>
+                                </div>
+
+                                <div class="col-sm-2 bus-price">
+                                    <h2>₹1000</h2>
+                                </div>
+
+                                <div class="col-sm-2 bus-seats">
+                                    <p>7 window seats</p>
+                                    <p>Total 27 seats left</p>
+                                    <a href="Login.html"><button>Select Seat</button></a>
+                                </div>
+                            </div>
+
+                            <div class="row search-result">
+                                <div class="col-sm-4 bus-info-col">
+                                    <div class="search-bus-info">
+                                        <h2>Orange Tours And Travels</h2>
+                                        <p class="search-text-p">A/C Sleeper (2+1)</p>
+                                        <span class="bus-rating">
+                                            <span>4.4/5</span>
+                                        </span>
+                                        <span class="seprater"></span>
+                                        <span class="search-text-p">286 Ratings</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-1 dep-time">
+                                    <h2>12:05</h2>
+                                    <p class="search-text-p">Malad East</p>
+                                </div>
+
+                                <div class="col-sm-1 total-time">
+                                    <p class="total-time-text">15h 15m</p>
+                                    <span class="time-border-bottom"></span>
+                                </div>
+
+                                <div class="col-sm-2 dep-time">
+                                    <h2>11:05</h2>
+                                    <p class="search-text-p">Malad East</p>
+                                </div>
+
+                                <div class="col-sm-2 bus-price">
+                                    <h2>₹1000</h2>
+                                </div>
+
+                                <div class="col-sm-2 bus-seats">
+                                    <p>7 window seats</p>
+                                    <p>Total 27 seats left</p>
+                                    <a href="Login.html"><button>Select Seat</button></a>
+                                </div>
+                            </div>
+
+                            <div class="row search-result">
+                                <div class="col-sm-4 bus-info-col">
+                                    <div class="search-bus-info">
+                                        <h2>Orange Tours And Travels</h2>
+                                        <p class="search-text-p">A/C Sleeper (2+1)</p>
+                                        <span class="bus-rating">
+                                            <span>4.4/5</span>
+                                        </span>
+                                        <span class="seprater"></span>
+                                        <span class="search-text-p">286 Ratings</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-1 dep-time">
+                                    <h2>12:05</h2>
+                                    <p class="search-text-p">Malad East</p>
+                                </div>
+
+                                <div class="col-sm-1 total-time">
+                                    <p class="total-time-text">15h 15m</p>
+                                    <span class="time-border-bottom"></span>
+                                </div>
+
+                                <div class="col-sm-2 dep-time">
+                                    <h2>11:05</h2>
+                                    <p class="search-text-p">Malad East</p>
+                                </div>
+
+                                <div class="col-sm-2 bus-price">
+                                    <h2>₹1000</h2>
+                                </div>
+
+                                <div class="col-sm-2 bus-seats">
+                                    <p>7 window seats</p>
+                                    <p>Total 27 seats left</p>
+                                    <a href="Login.html"><button>Select Seat</button></a>
                                 </div>
                             </div>
 
@@ -714,12 +1266,14 @@
         </div>
     </div>
 
-    <div class="scrolltop">
-        <img src="../images/icon.png" alt="Go-to-top" id="myBtn" onclick="topFunction()">
-    </div>
+    <button id="topBtn" onclick="topFunction()">
+        <i class='fa fa-arrow-up' alt="Go-to-top"></i>
+    </button>
 
     <script src="../javascript/script.js"></script>
-    
+    <script src="../javascript/seat.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script>
         function myFunction() {
             var x = document.getElementById("display-arrow");
@@ -731,20 +1285,34 @@
         }
 
         // Scroll function go to top of page 
-        var mybutton = document.getElementById("myBtn");
-        window.onscroll = function () { scrollFunction() };
+        $(document).ready(function () {
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 40) {
+                    $('#topBtn').fadeIn();
+                } else {
+                    $('#topBtn').fadeOut();
+                }
+            });
+
+            $("#topBtn").click(function () {
+                $('html ,body').animate({ scrollTop: 0 }, 800);
+            });
+        });
+
         function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
+
+        const navLink = document.querySelectorAll('.price');
+
+        function selectprice() {
+            /*Active link*/
+            navLink.forEach(n => n.classList.remove('selected-price'));
+            this.classList.add('selected-price');
+        }
+        navLink.forEach(n => n.addEventListener('click', selectprice));
     </script>
 </body>
 

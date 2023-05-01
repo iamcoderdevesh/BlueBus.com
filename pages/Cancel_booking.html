@@ -23,7 +23,7 @@
             <div class="nav__content bd-grid">
                 <a href="" class="nav__perfil">
                     <div class="nav__img">
-                        <img src="../images/logo.png" alt="">
+                        <p>BlueBus</p>
                     </div>
                 </a>
 
@@ -224,23 +224,27 @@
         </div>
     </div>
 
-    <div class="scrolltop">
-        <img src="../images/icon.png" alt="Go-to-top" id="myBtn" onclick="topFunction()">
-    </div>
+    <button id="topBtn" onclick="topFunction()">
+        <i class='fa fa-arrow-up' alt="Go-to-top"></i>
+    </button>
 
     <script src="../javascript/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        // Scroll function go to top of page 
-        var mybutton = document.getElementById("myBtn");
-        window.onscroll = function () {scrollFunction()};
+        $(document).ready(function () {
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 40) {
+                    $('#topBtn').fadeIn();
+                } else {
+                    $('#topBtn').fadeOut();
+                }
+            });
+
+            $("#topBtn").click(function () {
+                $('html ,body').animate({ scrollTop: 0 }, 800);
+            });
+        });
         function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;

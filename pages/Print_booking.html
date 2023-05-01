@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Print Booking</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/styles.css">
@@ -23,11 +23,7 @@
             <div class="nav__content bd-grid">
                 <a href="" class="nav__perfil">
                     <div class="nav__img">
-                        <img src="../images/logo.png" alt="">
-                    </div>
-
-                    <div>
-                        <span class="nav__name">LOGO</span>
+                        <p>BlueBus</p>
                     </div>
                 </a>
 
@@ -55,8 +51,10 @@
 
 
                             <ul class="dropdown__menu">
-                                <li class="dropdown__item"><a href="Print_booking.html" class="nav__link">Print Ticket</a></li>
-                                <li class="dropdown__item"><a href="Cancel_booking.html" class="nav__link">Cancel Ticket</a></li>
+                                <li class="dropdown__item"><a href="Print_booking.html" class="nav__link">Print
+                                        Ticket</a></li>
+                                <li class="dropdown__item"><a href="Cancel_booking.html" class="nav__link">Cancel
+                                        Ticket</a></li>
                             </ul>
                         </li>
 
@@ -226,23 +224,27 @@
         </div>
     </div>
 
-    <div class="scrolltop">
-        <img src="../images/icon.png" alt="Go-to-top" id="myBtn" onclick="topFunction()">
-    </div>
+    <button id="topBtn" onclick="topFunction()">
+        <i class='fa fa-arrow-up' alt="Go-to-top"></i>
+    </button>
 
     <script src="../javascript/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        // Scroll function go to top of page 
-        var mybutton = document.getElementById("myBtn");
-        window.onscroll = function () {scrollFunction()};
+        $(document).ready(function () {
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 40) {
+                    $('#topBtn').fadeIn();
+                } else {
+                    $('#topBtn').fadeOut();
+                }
+            });
+
+            $("#topBtn").click(function () {
+                $('html ,body').animate({ scrollTop: 0 }, 800);
+            });
+        });
         function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
